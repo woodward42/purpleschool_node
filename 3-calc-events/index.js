@@ -6,11 +6,11 @@ emitter.on("result", (res) => {
 });
 
 emitter.on("add", (a, b) => {
-  emitter.emit("result", firstNum + secondNum);
+  emitter.emit("result", a + b);
 });
 
 emitter.on("multiply", (a, b) => {
-  emitter.emit("result", firstNum * secondNum);
+  emitter.emit("result", a * b);
 });
 
 //переданные аргументы
