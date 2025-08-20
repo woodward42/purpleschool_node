@@ -35,5 +35,5 @@ switch (operation) {
     break;
 
   default:
-    console.log("no such operation");
+    console.log("no such operation!");
 }
