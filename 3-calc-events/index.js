@@ -1,4 +1,7 @@
-import { EventEmitter } from 'events';
+import { add } from "./add.js";
+import { multiply } from "./multiply.js";
+
+import { EventEmitter } from "events";
 const emitter = new EventEmitter();
 
 emitter.on("result", (res) => {
@@ -6,11 +9,11 @@ emitter.on("result", (res) => {
 });
 
 emitter.on("add", (a, b) => {
-  emitter.emit("result", a + b);
+  emitter.emit("result", add(a, b));
 });
 
 emitter.on("multiply", (a, b) => {
-  emitter.emit("result", a * b);
+  emitter.emit("result", multiply(a, b));
 });
 
 //переданные аргументы
