@@ -1,0 +1,28 @@
+{
+  "name": "7-timer-notifications",
+  "version": "1.0.0",
+  "description": "purpleschool_dz_7",
+  "keywords": [
+    "timer",
+    "notifier"
+  ],
+  "homepage": "https://github.com/woodward42/purpleschool_node#readme",
+  "bugs": {
+    "url": "https://github.com/woodward42/purpleschool_node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woodward42/purpleschool_node.git"
+  },
+  "license": "ISC",
+  "author": "WOODWARD42",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js 0ч 0м 3с"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  }
+}
