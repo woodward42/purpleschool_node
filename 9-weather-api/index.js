@@ -5,9 +5,6 @@ import "dotenv/config";
 const port = 8000;
 const app = express();
 
-// Middleware для парсинга JSON
-app.use(express.json());
-
 // Тестовый маршрут для проверки работы сервера
 app.get("/", (req, res) => {
   res.json({ message: "API работает!" });
