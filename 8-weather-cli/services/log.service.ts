@@ -1,15 +1,27 @@
 import chalk from "chalk"
 import dedent from "dedent-js"
 
-const printError = (err) => {
+interface WeatherData {
+  name: string;
+  main: {
+    temp: number;
+    feels_like: number;
+    humidity: number;
+  };
+  wind: {
+    speed: number;
+  };
+}
+
+const printError = (err: string | Error): void => {
   console.log(chalk.bgRed(" ERROR ") + ` ${err}`)
 }
 
-const printSuccess = (msg) => {
+const printSuccess = (msg: string): void => {
   console.log(chalk.bgGreen(" SUCCESS ") + ` ${msg}`)
 }
 
-const printHelp = (err) => {
+const printHelp = (): void => {
   console.log(
     dedent(`${chalk.bgCyan(" HELP ")}
     Без параметров - вывод погоды
@@ -20,7 +32,7 @@ const printHelp = (err) => {
   )
 }
 
-const printWeather = (results) => {
+const printWeather = (results: WeatherData[]): void => {
   results.forEach((res) => {
     console.log(
       dedent(`${chalk.bgYellow(" WEATHER: ")} Погода в городе ${res.name}
